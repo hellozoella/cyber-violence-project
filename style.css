@@ -1,0 +1,19 @@
+body {
+    font-family: serif;
+    font-size: 30px;
+}
+
+#p {
+    position: absolute;
+    left: 300px;
+    top: 50px;
+}
+
+.intro {
+    color: red;
+}
+
+.addpara {
+    color: red;
+    
+}
