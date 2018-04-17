@@ -1,19 +1,16 @@
+@font-face{
+    font-family: "BT";
+    src: url(font/belligerent.ttf);
+}
+
 body {
     font-family: serif;
     font-size: 30px;
 }
 
-#p {
-    position: absolute;
-    left: 300px;
-    top: 50px;
+#count, #added p {
+    font-family: "BT";
+    font-size: 80px;
 }
 
-.intro {
-    color: red;
-}
-
-.addpara {
-    color: red;
-    
-}
+#added p {font-size: 50px}
