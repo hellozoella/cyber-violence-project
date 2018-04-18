@@ -5,28 +5,24 @@ window.onload = function(){
     
 };
 
-//设置时间
+//设置时间和转发量
 function countnumbers(){
     var change_num = document.getElementById("count");
     var timeleft = 1;
-        
-    /**
-    1. 获取分钟元素
-    2. 设置时间的变化
-    3. 把变化的时间添加到分钟元素的内容子元素中
-    **/
-    
-    var uploadMin = setInterval(
-        
-    function countMinute(){
+    var val = 0;
     var minute = document.getElementById("minute");
-    var min = 0;
-        minute.textContent = min;
-        min++;      
-    }, 1000
-        )
+    
+    var time_raise = setInterval(
+        function(){
+            if(val<120){
+                val++;
+                minute.textContent = val;
+            }
+        }
+    ,1000);
+        
 
-    //设置时间增长
+    //设置转发量增长
     var uploadTimer = setInterval(
         
         function (){ 
@@ -34,13 +30,13 @@ function countnumbers(){
             change_num.textContent = timeleft;
             
 
-            if(timeleft >= 300){ //7680
+            if(timeleft >= 7680){ //7680
                 clearInterval(uploadTimer); //stop the time
                 //插入结束语句变量
     
                 var para = document.createElement("p");
                 var para_father = document.getElementById("added");
-                var para_content = document.createTextNode("THE HURT LASTS LIFE TIME LONG");
+                var para_content = document.createTextNode("HURT LASTS LIFE TIME LONG");
                 para_father.appendChild(para); //把<p>加入到div中
                 para.appendChild(para_content); //在<p>节点中加入文字内容
                     
@@ -68,12 +64,16 @@ function pictureStyle(){
     **/
     var para = document.getElementById("para");
     var con = document.getElementById("added");
+    var time = document.getElementById("time");
     para.style.position = "absolute";
     con.style.position = "absolute";
+    time.style.position = "absolute";
     para.style.left = width/3 + "px";
     para.style.top = height/5 + "px";
-    con.style.left = width/3 + "px";
+    con.style.left = width/4 + "px";
     con.style.top = height/3 + "px";
+    time.style.right = width/10 + "px";
+    time.style.top = height/20 + "px";
     
 }
 

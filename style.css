@@ -8,9 +8,10 @@ body {
     font-size: 30px;
 }
 
-#count, #added p {
+#count, #added p, #minute {
     font-family: "BT";
     font-size: 80px;
 }
 
-#added p {font-size: 50px}
+#added p, #minute {font-size: 50px}
+
